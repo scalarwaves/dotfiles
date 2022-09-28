@@ -7,10 +7,13 @@ depends = ["sway"]
 LICENSE = ""
 "README.md" = ""
 alacritty = "~/.config/alacritty.yml"
+aliases = "~/.aliases"
 kitty = "~/.config/kitty/kitty.conf"
+mako = "~/.config/mako/config"
 starship = "~/.config/starship.toml"
 topgrade = "~/.config/topgrade.toml"
 fish = "~/.config/fish/config.fish"
+zellij = "~/.config/zellij/config.yaml"
 
 [default.variables]
 
