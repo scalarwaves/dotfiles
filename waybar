@@ -1,0 +1,139 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30,
+    //"width": 1350, // Waybar width
+    // Choose the order of the modules idle_inhibitor
+    "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
+    "modules-right": ["custom/pacman", "backlight", "custom/keyboard-layout", "cpu", "memory", "battery", "network", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    
+ // Modules configuration
+ 
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+		"3": "3",
+		"4": "4",
+		"5": "5",
+		"6": "6",
+		"7": "7",
+		"8": "8",
+		"9": "9",
+		"10": "10",
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "format": "{}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+       "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 5
+    },
+    "clock": {
+        "tooltip-format": "{:%A %B %d %Y | %H:%M}",
+        "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
+        //"format": " {:%a %d %b  %H:%M}",	//24 hour format
+        "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+        //"timezones": [ "Kolkata" ],
+        //"max-length": 200
+        "interval": 1
+    },
+    "cpu": {
+        "format": "﬙ {usage}%",
+        "on-click": "alacritty -e htop"
+    },
+    "memory": {
+        "format": " {}%",
+        "on-click": "alacritty -e htop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl -c backlight set 5%",
+        "on-scroll-up": "brightnessctl -c backlight set +5%"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+        //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+    },
+     "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format": "⚠ Disabled",
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "alacritty -e nmtui"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted":"muted ",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+   "custom/pacman": {
+        "format": " {}",
+        "interval": 7200,                     // every two hours
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "alacritty -e sudo pacman -Syu ; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    },
+    "custom/power": {
+      	"format":"⏻",
+       	"on-click": "nwgbar",
+      	"tooltip": false,
+   },
+   "custom/keyboard-layout": {
+      	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+      	// Interval set only as a fallback, as the value is updated by signal
+      	"interval": 30,
+      	"format": "  {}", // Icon: keyboard
+      	// Signal sent by Sway key binding (~/.config/sway/key-bindings)
+      	"signal": 1, // SIGHUP
+      	"tooltip": false,
+        "on-click": "~/.config/waybar/scripts/keyhint.sh",
+},
+     "custom/launcher": {
+    	"format":" ",
+    	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+    	"tooltip": false,
+},
+}

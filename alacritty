@@ -1,0 +1,51 @@
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+# Peppermint
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xc7c7c7'
+
+  # Cursor colors
+  cursor:
+    text:   '0xffffff'
+    cursor: '0xbbbbbb'
+
+  # Normal colors
+  normal:
+    black:   '0x353535'
+    red:     '0xe64569'
+    green:   '0x89d287'
+    yellow:  '0xdab752'
+    blue:    '0x439ecf'
+    magenta: '0xd961dc'
+    cyan:    '0x64aaaf'
+    white:   '0xb3b3b3'
+
+  # Bright colors
+  bright:
+    black:   '0x535353'
+    red:     '0xe4859a'
+    green:   '0xa2cca1'
+    yellow:  '0xe1e387'
+    blue:    '0x6fbbe2'
+    magenta: '0xe586e7'
+    cyan:    '0x96dcda'
+    white:   '0xdedede'
+key_bindings:
+    - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+window.opacity: 0.75
+window:
+  padding:
+    x: 20
+    y: 20
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  size: 12
+live_config_reload: true
+dynamic_padding: true
+shell:
+   program: /bin/fish

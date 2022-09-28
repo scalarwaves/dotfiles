@@ -1,10 +1,25 @@
 [helpers]
 
 [default]
-depends = []
+depends = ["sway"]
 
 [default.files]
 LICENSE = ""
 "README.md" = ""
+alacritty = "~/.config/alacritty.yml"
+kitty = "~/.config/kitty/kitty.conf"
+starship = "~/.config/starship.toml"
+topgrade = "~/.config/topgrade.toml"
+fish = "~/.config/fish/config.fish"
 
 [default.variables]
+
+[sway]
+depends = ["waybar"]
+
+[sway.files]
+sway = "~/.config/sway/config"
+
+[waybar.files]
+waybar = "~/.config/waybar/config"
+style = "~/.config/waybar/style.css"
