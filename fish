@@ -109,7 +109,7 @@ alias l.="exa -a | egrep '^\.'"                                     # show only 
 alias ip="ip -color"
 
 # Replace some more things with better alternatives
-alias cat='bat --style header --style rules --style snip --style changes --style header'
+alias cat='bat --style header --style rule --style snip --style changes --style header'
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 # Common use
@@ -161,9 +161,9 @@ if status --is-interactive
 end
 clear
 ## Run fastfetch if session is interactive
-if status --is-interactive && type -q fastfetch
-   fastfetch --load-config neofetch
-end
+#if status --is-interactive && type -q fastfetch
+#   fastfetch --load-config neofetch
+#end
 
 # opam configuration
 source /home/drew/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

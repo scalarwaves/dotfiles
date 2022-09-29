@@ -5,7 +5,7 @@
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
     "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["custom/pacman", "backlight", "custom/keyboard-layout", "cpu", "memory", "battery", "network", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    "modules-right": ["custom/pacman", "backlight", "cpu", "memory", "battery", "network", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
     
  // Modules configuration
  
@@ -46,17 +46,17 @@
         "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
         //"format": " {:%a %d %b  %H:%M}",	//24 hour format
         "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
-        //"timezones": [ "Kolkata" ],
+        //"timezones": [ "New_York" ],
         //"max-length": 200
         "interval": 1
     },
     "cpu": {
         "format": "﬙ {usage}%",
-        "on-click": "alacritty -e htop"
+        "on-click": "alacritty -e btm"
     },
     "memory": {
         "format": " {}%",
-        "on-click": "alacritty -e htop"
+        "on-click": "alacritty -e musage"
     },
     "temperature": {
         // "thermal-zone": 2,
