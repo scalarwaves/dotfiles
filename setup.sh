@@ -4,7 +4,7 @@ cp ~/.cargo/bin/dotter .
 chmod +x ./dotter
 cp -v ~/.config/alacritty.yml alacritty
 cp -v ~/.aliases aliases
-cp -v ~/.config/kitty/kitty.conf kitty
+#cp -v ~/.config/kitty/kitty.conf kitty
 cp -v ~/.config/mako/config mako
 cp -v ~/.config/starship.toml starship
 cp -v ~/.config/topgrade.toml topgrade
