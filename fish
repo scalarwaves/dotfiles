@@ -9,7 +9,6 @@ set -x COLORTERM kitty
 set -x DEFAULT_USER $USER
 set -x EDITOR micro
 set -x EMULATOR "(basename "/"(ps -f -p (cat /proc/(echo %self)/stat | cut -d \  -f 4) | tail -1 | sed 's/^.* //'))"
-set -x EOLKEY 6b819e8caae01dafcd85daaf92df1fe24171183e
 set -x FBFONT /usr/share/kbd/consolefonts/ter-216n.psf.gz
 set -x IMAGE_PROXY true
 set -x NNN_FIFO /tmp/nnn.fifo
@@ -17,14 +16,11 @@ set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfvie
 set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.local/bin" "$PATH"
 set -x RUSTC_WRAPPER sccache
 set -x SKIM_DEFAULT_COMMAND "fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
-set -x TERMINAL kitty
+set -x TERMINAL alacritty
 set -x VISUAL micro
 set -x VST_PATH /usr/lib/vst
 set -x VST3_PATH /usr/lib/vst3 
 set -x VST2_SDK /usr/include/vstsdk2.4
-set -x WOLFRAM THQ469-A65TT6EY22
-set -x WORDNIK f9791aa420d6274b5bd4f0a96c20b34377d3ae33e542ca209
-set -x YANDEX trnsl.1.1.20170102T164826Z.aad5ce29ada925d2.33327130127541729edf53c2c28fa6598d12f83b
 #unbind coupled interrupts for desktop (black)
 set -x SOUND_CARD_IRQ 16
 #set -x SOUND_CARD_IRQ 30
@@ -166,4 +162,4 @@ clear
 #end
 
 # opam configuration
-source /home/drew/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
