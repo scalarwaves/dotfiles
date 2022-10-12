@@ -5,7 +5,7 @@
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
     "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["custom/pacman", "backlight", "cpu", "memory", "battery", "network", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    "modules-right": ["custom/pacman", "backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
     
  // Modules configuration
  
@@ -83,14 +83,6 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
         //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
-    },
-     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format": "⚠ Disabled",
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        "format-disconnected": "⚠ Disconnected",
-        "on-click": "alacritty -e nmtui"
     },
     "pulseaudio": {
         "scroll-step": 5,

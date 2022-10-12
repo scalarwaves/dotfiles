@@ -11,7 +11,7 @@ set -x EDITOR micro
 set -x EMULATOR "(basename "/"(ps -f -p (cat /proc/(echo %self)/stat | cut -d \  -f 4) | tail -1 | sed 's/^.* //'))"
 set -x FBFONT /usr/share/kbd/consolefonts/ter-216n.psf.gz
 set -x IMAGE_PROXY true
-set -x MOZ_ENABLE_WAYLAND=1
+#set -x MOZ_ENABLE_WAYLAND=1
 set -x NNN_FIFO /tmp/nnn.fifo
 set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfview;w:preview-tui"
 set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.local/bin" "$PATH"

@@ -6,7 +6,7 @@ depends = ["sway"]
 [default.files]
 LICENSE = ""
 "README.md" = ""
-alacritty = "~/.config/alacritty.yml"
+alacritty = "~/.config/alacritty/alacritty.yml"
 aliases = "~/.aliases"
 #kitty = "~/.config/kitty/kitty.conf"
 mako = "~/.config/mako/config"
