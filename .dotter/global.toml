@@ -8,11 +8,12 @@ LICENSE = ""
 "README.md" = ""
 alacritty = "~/.config/alacritty/alacritty.yml"
 aliases = "~/.aliases"
+fish = "~/.config/fish/config.fish"
 #kitty = "~/.config/kitty/kitty.conf"
 mako = "~/.config/mako/config"
+rofi = "~/.config/rofi/config.rasi"
 starship = "~/.config/starship.toml"
 topgrade = "~/.config/topgrade.toml"
-fish = "~/.config/fish/config.fish"
 zellij = "~/.config/zellij/config.yaml"
 
 [default.variables]

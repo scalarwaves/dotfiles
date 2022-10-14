@@ -16,7 +16,7 @@ set $term-float alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -c ~/.config/wofi/config -I
+set $menu rofi -show run
 set $launcher nwg-drawer -c 7 -is 70 -spacing 23
 set $powermenu nwgbar
 set $cheat gedit ~/.config/sway/cheatsheet
@@ -80,18 +80,28 @@ set $cheat gedit ~/.config/sway/cheatsheet
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-# Workspaces:
-    # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+	# Workspaces:
+	bindsym --no-repeat $mod+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+7 workspace number 7; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+8 workspace number 8; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+9 workspace number 9; exec "echo 1 > /tmp/sovpipe"
+	bindsym --no-repeat $mod+0 workspace number 10; exec "echo 1 > /tmp/sovpipe"
+
+	bindsym --release $mod+1 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+2 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+3 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+4 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+5 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+6 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+7 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+8 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+9 exec "echo 0 > /tmp/sovpipe"
+	bindsym --release $mod+0 exec "echo 0 > /tmp/sovpipe"
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -200,6 +210,13 @@ for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, s
 for_window [title="Picture in picture"] floating enable, sticky enable
 for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
 for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [app_id="calcurse"] floating enable, resize set 1280 720, position center
+for_window [title="Picture-in-Picture"] floating enable, resize set 500 300, position center
+for_window [app_id="pavu"] floating enable, resize set 1280 720, position center
+for_window [app_id="imv"] floating enable, resize set 1280 720, position center
+for_window [app_id="easyeffects"] floating enable, resize set 1280 720, position center
+floating_minimum_size 640 x 480
+floating_maximum_size 1280 x 720
 for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
 for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
@@ -219,6 +236,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Wob
 exec mkfifo $SWAYSOCK.wob
 exec tail -f $SWAYSOCK.wob | wob --border-color '#ffdcbb8c' --background-color '#cc3a3a3a' --bar-color '#ffdcbb8c'
+# sov
+exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
 # Autotiling
 exec autotiling
 # Wlsunset
@@ -272,8 +291,10 @@ exec_always {
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 5
+smart_gaps on
+gaps inner 4
+gaps outer 3
+seat seat0 xcursor_theme 'Simp1e-Gruvbox-Dark' 24
 # Hide titlebar on windows: 
 default_border pixel 1
 # Default Font
@@ -286,11 +307,19 @@ smart_borders on
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 ## Window decoration
-# class                 border  backgr. text    indicator child_border
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+# Color binds
+set $col_focused #fe8019
+set $col_focused_inactive #fabd2f
+set $col_unfocused #282828
+set $col_text_dark #1d2021
+set $col_text_light #bdae93
+set $col_urgent #fb4934
+
+# class                  border                 background             text             indicator              child_border
+client.focused           $col_focused           $col_focused           $col_text_dark   $col_focused           $col_focused
+client.focused_inactive  $col_focused_inactive  $col_focused_inactive  $col_text_dark   $col_focused_inactive  $col_focused_inactive
+client.unfocused         $col_text_dark         $col_unfocused         $col_text_light  $col_unfocused         $col_unfocused
+client.urgent            $col_text_dark         $col_urgent            $col_text_dark   $col_urgent            $col_urgent
 # Status Bar:
 bar {
    swaybar_command waybar

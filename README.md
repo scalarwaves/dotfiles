@@ -6,11 +6,11 @@ ArchLinux is my system base
 
 Garuda Linux is my distribution
 
-Mako, Sway, Waybar and Wofi are my desktop
+mako, sway, waybar and rofi are my desktop
 
-Fish is my shell
+fish is my shell
 
-Starship is my prompt
+starship is my prompt
 
 zellij is my terminal multiplexer
 
@@ -18,3 +18,4 @@ helix is my modal editor
 
 dotter is my dotfile manager
 
+ranger is my file manager
