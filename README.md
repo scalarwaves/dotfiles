@@ -1,6 +1,6 @@
 # My configuration files
 
-[alacritty](https://github.com/alacritty/alacritty (and sometimes [kitty](https://github.com/kovidgoyal/kitty)) are my terminal emulators
+[alacritty](https://github.com/alacritty/alacritty) (and sometimes [kitty](https://github.com/kovidgoyal/kitty)) are my terminal emulators
 
 [ArchLinux](https://wiki.archlinux.org/title/Arch_Linux) is my system base
 
