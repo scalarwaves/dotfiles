@@ -10,11 +10,11 @@ set -x EDITOR micro
 set -x EMULATOR "(basename "/"(ps -f -p (cat /proc/(echo %self)/stat | cut -d \  -f 4) | tail -1 | sed 's/^.* //'))"
 set -x FBFONT /usr/share/kbd/consolefonts/ter-216n.psf.gz
 set -x IMAGE_PROXY true
-set -x LC_ALL=C
+set -x LC_ALL C
 #set -x MOZ_ENABLE_WAYLAND=1
 set -x NNN_FIFO /tmp/nnn.fifo
 set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfview;w:preview-tui"
-set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.gem/ruby/3.0.4/bin" "$HOME/.local/bin" "$PATH"
+set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.local/share/gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.local/bin" "$PATH"
 set -x RUSTC_WRAPPER sccache
 set -x SKIM_DEFAULT_COMMAND "fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 set -x TERMINAL alacritty
@@ -85,6 +85,10 @@ function copy
         command cp $argv
     end
 end
+function tere
+    set --local result (command tere $argv)
+    [ -n "$result" ] && cd -- "$result"
+end
 ## Useful aliases
 # Replace ls with exa
 alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
@@ -146,4 +150,3 @@ source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
-clear
