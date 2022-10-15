@@ -1,5 +1,7 @@
 # My configuration files
 
+gruvbox-dark is my colorscheme
+
 [alacritty](https://github.com/alacritty/alacritty) (and sometimes [kitty](https://github.com/kovidgoyal/kitty)) are my terminal emulators
 
 [ArchLinux](https://wiki.archlinux.org/title/Arch_Linux) is my system base
@@ -18,4 +20,4 @@
 
 [dotter](https://github.com/SuperCuber/dotter) is my dotfile manager
 
-ranger is my file manager
+[xplr](https://github.com/sayanarijit/xplr) is my file manager 
