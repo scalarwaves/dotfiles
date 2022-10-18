@@ -3,23 +3,28 @@
 include $HOME/.config/sway/config.d/*
 # only enable this if every app you use is compatible with wayland
 # xwayland disable
+
 # DEFAULTS
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulators
-set $term-float alacritty
+set $term-float kitty fish
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -show run
 set $launcher nwg-drawer -c 7 -is 70 -spacing 23
-set $powermenu nwgbar
-set $cheat gedit ~/.config/sway/cheatsheet
+set $powermenu wlogout
+set $cheat micro ~/.config/sway/cheatsheet
+
 ### Idle configuration
 # exec swayidle -w\
 #     timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
@@ -29,14 +34,16 @@ set $cheat gedit ~/.config/sway/cheatsheet
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
 # Lock Screen
- bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
+# bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
+
 ### Key bindings
 # Basics:
     # Start a floating terminal
     bindsym $mod+Return exec $term-float
     # Open the power menu
-    bindsym $mod+Shift+e exec $powermenu
+    bindsym $mod+X exec wlogout
     # Kill focused window
     bindsym $mod+q kill
     # Start your launcher
@@ -57,8 +64,11 @@ set $cheat gedit ~/.config/sway/cheatsheet
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
+    # restart sway in place
+    bindsym $mod+Shift+r restart
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+
 # Moving around:
     # Move your focus around
     bindsym $mod+$left focus left
@@ -115,6 +125,7 @@ set $cheat gedit ~/.config/sway/cheatsheet
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
 # Layout stuff:
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
@@ -133,6 +144,7 @@ set $cheat gedit ~/.config/sway/cheatsheet
     bindsym $mod+space focus mode_toggle
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
 # Scratchpad:
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
@@ -141,6 +153,7 @@ set $cheat gedit ~/.config/sway/cheatsheet
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
 # Resizing containers:
 mode "resize" {
     # left will shrink the containers width
@@ -161,11 +174,13 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
 # Resize floating windows with mouse scroll:
 bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
 bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
 bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5 ppt
 bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
+
 # Volume
 bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
 bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
@@ -178,12 +193,16 @@ bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo
 # Backlight
     bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
     bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
+
 # App shortcuts
     bindsym $mod+n exec thunar
     bindsym $mod+o exec firedragon
+    bindsym $mod+g exec github-desktop
+
 # Screenshots
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+
 # APPLICATION DEFAULTS
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
@@ -223,89 +242,125 @@ for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
 # Inhibit idle
 for_window [app_id="firedragon"] inhibit_idle fullscreen
 for_window [app_id="Chromium"] inhibit_idle fullscreen
+
 # Auth with polkit-gnome:
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Desktop notifications
 exec mako
+
+# add icons to sway tabs
+exec swaycons
+
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py     
+
 # Wob
 exec mkfifo $SWAYSOCK.wob
 exec tail -f $SWAYSOCK.wob | wob --border-color '#ffdcbb8c' --background-color '#cc3a3a3a' --bar-color '#ffdcbb8c'
+
 # sov
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
+
 # Autotiling
 exec autotiling
+
 # Wlsunset
 exec ~/.config/sway/scripts/light.sh
 # nm-applet
 exec nm-applet --indicator
+
 # Welcome
 exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+
 # Clipman
 exec clipman restore
 exec wl-paste -t text --watch clipman store
+
 # Gnome Keyring
 exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+
 # for Touchpad gestures
 exec libinput-gestures-setup start
+
 # Outputs
 exec kanshi
+
 # Xdg DEsktop Portal
 exec /usr/libexec/xdg-desktop-portal
+
 # Tracker daemon for gnome apps
 exec tracker daemon -s
+
 # Cheatsheet
-exec micro ~/.config/sway/cheatsheet
+#exec micro ~/.config/sway/cheatsheet
+
 # nwg-drawer
 exec_always nwg-drawer -r 
+
 # swayrd
 exec_always swayrd
+
 # Clamshell Mode
 set $laptop <eDP-1>
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always ~/.config/sway/scripts/clamshell.sh
+
 ### Input configuration
 # Example configuration:
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
-input type:touchpad {
-      dwt enabled
-      tap enabled
-      natural_scroll enabled
+input 2:7:SynPS/2_Synaptics_Touchpad {
+    left_handed disabled
+    tap enabled
+    natural_scroll disabled
+    dwt enabled
+    accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0.5 # set mouse sensitivity (between -1 and 1)
 }
 input type:keyboard xkb_layout "us"
 exec_always {
    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
 }
+
 ### Output configuration
 # Example configuration:
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output eDP-1 resolution 1366x768 position 1366,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
+
 # Set inner/outer gaps
 smart_gaps on
-gaps inner 4
-gaps outer 3
+gaps inner 3
+gaps outer 2
 seat seat0 xcursor_theme 'Simp1e-Gruvbox-Dark' 24
+
 # Hide titlebar on windows: 
 default_border pixel 1
+
 # Default Font
-font pango:FiraCode Regular 10
+font pango:FiraCode Regular 12
+
 # Thin borders:
 smart_borders on
+
 # Set wallpaper:
 #exec ~/.azotebg
+# variety is used for rotating wallpapers
+
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
+
 ## Window decoration
 # Color binds
 set $col_focused #fe8019
@@ -314,12 +369,12 @@ set $col_unfocused #282828
 set $col_text_dark #1d2021
 set $col_text_light #bdae93
 set $col_urgent #fb4934
-
 # class                  border                 background             text             indicator              child_border
 client.focused           $col_focused           $col_focused           $col_text_dark   $col_focused           $col_focused
 client.focused_inactive  $col_focused_inactive  $col_focused_inactive  $col_text_dark   $col_focused_inactive  $col_focused_inactive
 client.unfocused         $col_text_dark         $col_unfocused         $col_text_light  $col_unfocused         $col_unfocused
 client.urgent            $col_text_dark         $col_urgent            $col_text_dark   $col_urgent            $col_urgent
+
 # Status Bar:
 bar {
    swaybar_command waybar
@@ -330,7 +385,7 @@ bar {
 #    status_command i3status-rs $HOME/.config/i3status-rust/config.toml
 #    colors {
 #        separator #666666
-#        background #222222
+#        background #1D2021
 #        statusline #dddddd
 #        focused_workspace #0088CC #0088CC #ffffff
 #        active_workspace #333333 #333333 #ffffff

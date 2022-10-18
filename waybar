@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 20,
-    "modules-left": ["sway/workspaces", "custom/arrow-dark-on-light-right", "custom/arrow-light-on-bg-right", "sway/mode"],
-    "modules-center": ["clock"],
+    "modules-left": ["clock", "sway/workspaces", "sway/mode"],
+    "modules-center": [],
     "modules-right": ["custom/arrow-dark-on-bg-left", "pulseaudio",
                       "custom/arrow-light-on-dark-left", "network",
                       "custom/arrow-dark-on-light-left", "cpu",
@@ -11,7 +11,6 @@
                       "custom/arrow-dark-on-light-left", "temperature",
                       "custom/arrow-light-on-dark-left", "backlight",
                       "custom/arrow-dark-on-light-left", "battery",
-                      "custom/arrow-light-on-dark-left", "sway/language",
                       "custom/arrow-dark-on-light-left", "tray"],
 
     "sway/mode": {
@@ -19,7 +18,7 @@
     },
 
     "clock": {
-        "timezone": "US/New_York",
+        "timezone": "New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}",
 	"on-click-right": "kitty --class=calcurse -e calcurse"
