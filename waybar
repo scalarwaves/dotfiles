@@ -2,23 +2,16 @@
     "layer": "top",
     "position": "top",
     "height": 20,
-    "modules-left": ["clock", "sway/workspaces", "sway/mode"],
-    "modules-center": [],
-    "modules-right": ["custom/arrow-dark-on-bg-left", "pulseaudio",
-                      "custom/arrow-light-on-dark-left", "network",
-                      "custom/arrow-dark-on-light-left", "cpu",
-                      "custom/arrow-light-on-dark-left", "memory",
-                      "custom/arrow-dark-on-light-left", "temperature",
-                      "custom/arrow-light-on-dark-left", "backlight",
-                      "custom/arrow-dark-on-light-left", "battery",
-                      "custom/arrow-dark-on-light-left", "tray"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/pipewire", "network", "cpu", "memory", "temperature", "backlight", "battery", "tray"],
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
 
     "clock": {
-        "timezone": "New_York",
+        "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}",
 	"on-click-right": "kitty --class=calcurse -e calcurse"
@@ -78,7 +71,7 @@
     "temperature": {
         "tooltip": false,  
         "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
+        "format": "{temperatureF}°F {icon}",
         "format-icons": ["", "", ""]
     },
 
@@ -128,5 +121,16 @@
     "custom/arrow-dark-on-light-right": {
         "tooltip": false,
         "format": ""
+    },
+    "custom/pipewire": {
+        "exec": "pw-volume status",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "format": "{icon} {percentage}",
+        "format-icons": {
+            "mute": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        }
     }
 }

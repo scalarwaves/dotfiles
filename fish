@@ -91,7 +91,7 @@ function tere
 end
 ## Useful aliases
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
+# alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons' # all files and dirs
 alias ll='exa -l --color=always --group-directories-first --icons' # long format
 alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
@@ -105,7 +105,6 @@ alias cat='bat --style header --style rule --style snip --style changes --style 
 alias f2c=faust2ck
 alias f2r=faust2portaudiorust
 alias f2jr=faust2jackrust
-alias milkytracker="milkytracker -nosplash"
 # admin
 alias bb="sudo bauerbill -Syyu --aur --bb-quiet --build-all"
 #alias cat='bat -p '
@@ -115,32 +114,47 @@ alias clea=clear
 alias clera=clear
 alias cls=clear
 alias lcear=clear
+alias sl=ls
+# dev
 alias code=vscodium
 alias diff="diff --color"
-#alias dir=exa
-alias figlet=cfonts
-#alias fzf=sk
 alias j=just
-#alias kat=bat
 alias kg="ssh-keygen -t rsa -b 4096 -C" # command + email
 alias logrep="/bin/cat /var/log/**/*.log |rg "
-#alias ls=exa
 alias renoise="renoise --scripting-dev"
-#alias sl=ls
 alias sshp='ssh -o PubkeyAuthentication=no '
 # arch
-alias pi="sudo pacman -S --noconfirm"
-alias pse="sudo pacman -Ss"
-alias yi="paru -S --noconfirm"
-alias yse="paru -Ss"
-alias ycc="paru -Scc -v"
-alias pu="sudo pacman -U --noconfirm --needed -v"
-alias yu="paru -U --noconfirm --needed -v"
+alias pi="sudo pacman -S --noconfirm --color auto"
+alias pse="sudo pacman -Ss --color auto"
+alias yi="paru -S --noconfirm --color auto"
+alias yse="paru -Ss --color auto"
+alias ycc="paru -Scc -v --color auto"
+alias pu="sudo pacman -U --noconfirm --needed -v --color auto"
+alias yu="paru -U --noconfirm --needed -v --color auto"
 alias yug="paru -Syyua --devel --noconfirm --needed --color auto"
-#rust
+#rust equivalents and aliases
 alias car=cargo
 alias cm="cargo make"
-# debian
+alias cp=fcp
+#alias cp=xcp
+alias cut=tuc
+alias du=dua
+alias mv=pmv
+alias nvm=fnm
+alias ps=procs
+alias reflector=asu
+alias rm=rip
+alias sed=sd
+alias sloc=tokei
+alias sysctl=systeroid
+alias tail=staart
+#alias time=rtime
+#alias time=tally
+alias top=btm
+alias touch=riptouch
+alias tree=tree-rs
+alias wc=cw
+# debian (I use Arch now)
 #alias aar="sudo add-apt-repository"
 #alias ai="sudo apt install"
 #alias arm="sudo apt autoremove"
@@ -154,10 +168,7 @@ alias cm="cargo make"
 #alias gk="sudo gpg --recv-keys "
 alias md=mkdir
 # misc
-alias icons=get_icon_names
-alias plsh="/bin/ls -poAgZsh --color=always"
 alias slice="sed -i" # slice + s/match/replacement/
-#alias td=todo.sh
 # git
 alias github=gh
 alias gbsutomm="git branch --set-upstream-to=origin/master master"
@@ -198,7 +209,7 @@ alias stol="node src/toloko.js"
 # tmux
 #alias tpm=ellipsis-tpm
 alias grubup="sudo update-grub"
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
+alias unlockpm="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
 alias untar='tar -xvf '
 alias wget='wget -c '
@@ -229,7 +240,6 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
-# Conflicts with rm-improved (rip)
 alias rpkgs="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # Completion
 lazycomplete \
@@ -241,14 +251,13 @@ lazycomplete \
 | source
 # opam configuration
 source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
-# volta
+# volta (npm)
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 ## Starship prompt
 if status --is-interactive
     source ("/usr/bin/starship" init fish --print-full-init | psub)
 end
-clear
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
 fastfetch --kitty ~/Downloads/garudalinux-logo.png
