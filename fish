@@ -11,9 +11,10 @@ set -x EMULATOR "(basename "/"(ps -f -p (cat /proc/(echo %self)/stat | cut -d \ 
 set -x FBFONT /usr/share/kbd/consolefonts/ter-216n.psf.gz
 set -x IMAGE_PROXY true
 set -x LC_ALL C
+set -x MICRO_TRUECOLOR 1
 #set -x MOZ_ENABLE_WAYLAND=1
 set -x NNN_FIFO /tmp/nnn.fifo
-set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfview;w:preview-tui"
+set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfview;w:preview-tui;z:autojump;"
 set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.local/share/gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.local/bin" "$PATH"
 set -x RUSTC_WRAPPER sccache
 set -x SKIM_DEFAULT_COMMAND "fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
@@ -89,6 +90,17 @@ function tere
     set --local result (command tere $argv)
     [ -n "$result" ] && cd -- "$result"
 end
+function ll --wraps=ls --wraps=exa --description 'List contents of directory using exa tree'
+    exa --tree --level=2 -a --long --header --accessed --git $argv
+end
+## Starship prompt
+if status --is-interactive
+    source ("/usr/bin/starship" init fish --print-full-init | psub)
+end
+## Run fastfetch if session is interactive
+#if status --is-interactive && type -q fastfetch
+#   fastfetch --kitty ~/Downloads/garudalinux-logo.png
+#end
 ## Useful aliases
 # Replace ls with exa
 # alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
@@ -134,26 +146,29 @@ alias yu="paru -U --noconfirm --needed -v --color auto"
 alias yug="paru -Syyua --devel --noconfirm --needed --color auto"
 #rust equivalents and aliases
 alias car=cargo
+#alias cd=zoxide
 alias cm="cargo make"
-alias cp=fcp
+#alias cp=fcp
 #alias cp=xcp
 alias cut=tuc
 alias du=dua
-alias mv=pmv
+#alias mv=pmv
 alias nvm=fnm
-alias ps=procs
-alias reflector=asu
-alias rm=rip
-alias sed=sd
+#alias ps=procs
+#alias reflector=asu
+#alias rm=rip
+#alias sed=sd
 alias sloc=tokei
 alias sysctl=systeroid
 alias tail=staart
 #alias time=rtime
 #alias time=tally
 alias top=btm
-alias touch=riptouch
+alias topgrade=topgrade-rs
+#alias touch=riptouch
 alias tree=tree-rs
 alias wc=cw
+alias xcd='cd "$(xplr --print-pwd-as-result)"'
 # debian (I use Arch now)
 #alias aar="sudo add-apt-repository"
 #alias ai="sudo apt install"
@@ -208,6 +223,7 @@ alias stol="node src/toloko.js"
 #alias rv="rvm use"
 # tmux
 #alias tpm=ellipsis-tpm
+# garuda linux
 alias grubup="sudo update-grub"
 alias unlockpm="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
@@ -248,17 +264,13 @@ lazycomplete \
     kitty 'kitty + complete setup fish' \
     ptags 'ptags --completion fish' \
     himalaya 'himalaya completion fish' \
+    luarocks "luarocks completion fish" \
 | source
+zoxide init --cmd cd --hook pwd fish | source
 # opam configuration
 source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 # volta (npm)
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
-## Starship prompt
-if status --is-interactive
-    source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
-## Run fastfetch if session is interactive
-if status --is-interactive && type -q fastfetch
-fastfetch --kitty ~/Downloads/garudalinux-logo.png
-end
+clear
+macchina

@@ -190,7 +190,7 @@ bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
     bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
 # App shortcuts
     bindsym $mod+n exec thunar
-    bindsym $mod+o exec firedragon
+    bindsym $mod+o exec google-chrome-stable
     bindsym $mod+g exec github-desktop
 # Screenshots
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
@@ -236,14 +236,18 @@ for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
 for_window [app_id="firedragon"] inhibit_idle fullscreen
 for_window [app_id="Chromium"] inhibit_idle fullscreen
 
+# swaysock
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # Auth with polkit-gnome:
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Desktop notifications
-exec mako
+exec_always mako
+# add app names and icons to sway tabs
+exec_always swaywsr -r -c $HOME/.config/swaywsr/config.toml -i awesome
 # add icons to sway tabs
-exec swaycons
+#exec swaycons
 # use alt+tab to switch windows
-exec sway-alttab
+exec_always sway-alttab
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
@@ -255,6 +259,7 @@ exec mkfifo $SWAYSOCK.wob
 exec tail -f $SWAYSOCK.wob | wob --border-color '#ffdcbb8c' --background-color '#cc3a3a3a' --bar-color '#ffdcbb8c'
 # sov
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
+exec swaywsr --icons awesome --no-names --remove-duplicates --config $XDG_CONFIG_HOME/swaywsr/config.toml
 # Autotiling
 exec autotiling
 # Wlsunset

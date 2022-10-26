@@ -43,8 +43,8 @@ keybinds:
         - action: [Resize: Decrease,]
           key: [ Alt: '-']
         # uncomment this and adjust key if using copy_on_select=false
-        # - action: [Copy: ]
-        #   key: [ Alt: 'c']
+        - action: [Copy: ]
+          key: [ Alt: 'c']
     locked:
         - action: [SwitchToMode: Normal,]
           key: [Ctrl: 'g',]
@@ -594,7 +594,7 @@ default_shell: fish
 # Choose the theme that is specified in the themes section.
 # For some examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 # Default: default
-theme: gruvbox-dark
+theme: catppuccin-mocha
 
 # Choose the mode that zellij uses when starting up.
 # Default: normal

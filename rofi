@@ -1,6 +1,6 @@
 configuration {
     threads: 0;
-    modi: "calc,drun,power-menu:~/.bin/power-menu.sh,ssh";
+    modi: "calc,drun:ssh";
     case-sensitive: false;
     cycle: true;
     scroll-method: 1;
