@@ -265,6 +265,7 @@ lazycomplete \
     ptags 'ptags --completion fish' \
     himalaya 'himalaya completion fish' \
     luarocks "luarocks completion fish" \
+    zellij "zellij --generate-completion fish" \
 | source
 zoxide init --cmd cd --hook pwd fish | source
 # opam configuration
