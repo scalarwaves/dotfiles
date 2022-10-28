@@ -1,6 +1,6 @@
 # My configuration files
 
-catppuccin-mocha is my colorscheme
+[catppuccin-mocha](https://github.com/catppuccin/catppuccin) is my colorscheme
 
 [alacritty](https://github.com/alacritty/alacritty) and [kitty](https://github.com/kovidgoyal/kitty) are my terminal emulators
 
