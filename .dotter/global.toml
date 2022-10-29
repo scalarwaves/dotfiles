@@ -1,28 +1,63 @@
-[helpers]
+# [bat]
+#     [bat.files]
+#     "bat/config" = "~/.config/bat/config"
+#     "bat/themes/Catppuccin-mocha.tmTheme" = "~/.config/bat/themes/Catppuccin-mocha.tmTheme"
 
 [default]
-depends = ["sway"]
-
-[default.files]
-LICENSE = ""
-"README.md" = ""
-alacritty = "~/.config/alacritty/alacritty.yml"
-fish = "~/.config/fish/config.fish"
-kitty = "~/.config/kitty/kitty.conf"
-mako = "~/.config/mako/config"
-rofi = "~/.config/rofi/config.rasi"
-starship = "~/.config/starship.toml"
-topgrade = "~/.config/topgrade.toml"
-zellij = "~/.config/zellij/config.yaml"
+    [default.files]
+    LICENSE = ""
+    "README.md" = ""
+    alacritty = "~/.config/alacritty/alacritty.yml"
+    starship = "~/.config/starship.toml"
+    topgrade = "~/.config/topgrade.toml"
+    wezterm = "~/.config/wezterm/wezterm.lua"
 
 [default.variables]
+app-browser = "google-chrome-stable"
+app-editor = "hx"
+app-pager = "bat"
+app-visual = "code -w"
 
-[sway]
-depends = ["waybar"]
+# [fish]
+#     [fish.files]
+#     "fish/config.fish" = "~/.config/fish/config.fish"
+#     "fish/fish_plugins" = "~/.config/fish/fish_plugins"
+#     "fish/fish_variables" = "~/.config/fish/fish_variables"
+#     "fish/completions/fisher.fish" = "~/.config/fish/completions/fisher.fish"
+#     "fish/conf.d/done.fish" = "~/.config/fish/conf.d/done.fish"
+#     "fish/conf.d/env.fish" = "~/.config/fish/conf.d/env.fish"
+#     "fish/conf.d/mcfly.fish" = "~/.config/fish/conf.d/mcfly.fish"
+#     "fish/functions/fisher.fish" = "~/.config/fish/functions/fisher.fish"
+#     "fish/themes/Catppuccin Mocha.theme" = "~/.config/fish/themes/Catppucin Mocha.theme"
 
-[sway.files]
-sway = "~/.config/sway/config"
+# [git]
+#     [git.files]
+#     "git/attributes"             = "~/.config/git/attributes"
+#     "git/config"                 = "~/.config/git/config"
 
-[waybar.files]
-waybar = "~/.config/waybar/config"
-style = "~/.config/waybar/style.css"
+
+# [gpg]
+#     [gpg.files]
+#     "gpg/gpg-agent.conf" = "~/.local/share/gnupg/gpg-agent.conf"
+
+# [helix]
+#     [helix.files]
+#     "helix/config.toml" = "~/.config/helix/config.toml"
+#     "helix/languages.toml" = "~/.config/helix/languages.toml"
+#     "helix/themes/catppuccin_mocha.toml" = "~/.config/helix/themes/catppuccin_mocha.toml"
+
+# [kitty]
+#     [kitty.files]
+#     "kitty/kitty.conf"       = "~/.config/kitty/kitty.conf"
+
+# [sway]
+#     [sway.files]
+#     sway = "~/.config/sway/config"
+#     [sway.variables]
+#     terminal = "kitty"
+
+# [waybar.files]
+#     "waybar/config" = "~/.config/waybar/config"
+#     "waybar/style.css" = "~/.config/waybar/style.css"
+#     "waybar/mocha.css" = "~/.config/waybar/mocha.css"
+#     "waybar/scripts/keyhint.sh" = "~/.config/waybar/scripts/keyhint.sh"

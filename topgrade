@@ -61,6 +61,7 @@ disable = ["system", "emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolate
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+"Cargo Save" = "~/.bin/cargosave"
 
 [brew]
 #greedy_cask = true
