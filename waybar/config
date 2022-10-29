@@ -1,136 +1,151 @@
+
+
+// -*- mode: json -*-
 {
     "layer": "top",
     "position": "top",
-    "height": 20,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/pipewire", "network", "cpu", "memory", "temperature", "backlight", "battery", "tray"],
-
+    "output": [
+      "HDMI-A-1"
+    ],
+    "modules-center": [],
+    "modules-left": [
+      "custom/gap",
+      "custom/arch",
+      "sway/workspaces",
+      "sway/mode",
+      "sway/window",
+      "wlr/taskbar"
+    ],
+    "modules-right": [
+      "network",
+      "custom/media",
+      "pulseaudio",
+      "cpu",
+      "memory",
+      "disk",
+      "battery",
+      "clock#1",
+      "clock#2",
+      "tray",
+      "idle_inhibitor",
+      "custom/power",
+      "custom/gap"
+    ],
+    "sway/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": false,
+      "format": "{name}",
+    },
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+      "format": "{}"
     },
-
-    "clock": {
-        "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d-%m-%Y}",
-	"on-click-right": "kitty --class=calcurse -e calcurse"
+    "sway/window": {
+      "format": "{}",
+      "max-length": 60
     },
-
-    "pulseaudio": {
-        "scroll-step": 1,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "  {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "headset": "",
-            "default": ["", "", ""]
-        },
-        "tooltip": false,
-        "on-click": "pavucontrol --class=pavu",
-	"on-click-right": "easyeffects"
+    "clock#1": {
+      "format": "{:%H:%M 🕒}",
+      "on-click": "alacritty -e tock"
     },
-
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-	"tooltip": false,
-        "on-click": "kitty --class=nmtui -e nmtui"
+    "clock#2": {
+      "format": "{:%d %B, %Y 📅}",
+      "on-click": "thunderbird -calendar"
     },
-
-    "cpu": {
-        "format": "{usage}% ",
-	"states": {
-            "warning": 60,
-            "critical": 80
-	},
-        "tooltip": false,
-	"on-click": "kitty --class=btop -e btop"
-    },
-
-    "tray": {
-        "tooltip": false,
-        "spacing": 5
-    },
-
-    "memory": {
-       	"tooltip": false,
-        "format": "{}% ",
-        "states": {
-	    "warning": 60,
-	    "critical": 80
-        }
-    },
-
-    "temperature": {
-        "tooltip": false,  
-        "critical-threshold": 80,
-        "format": "{temperatureF}°F {icon}",
-        "format-icons": ["", "", ""]
-    },
-
-    "backlight": {
-        "tooltip": false,
-        "format": "{percent}% {icon}",
-        "format-icons": [""]
-    },
-
     "battery": {
-        "tooltip": false,
-        "states": {
-            "warning": 35,
-            "critical": 20
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% 🔌",
+      "format-alt": "{time} {icon}",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
-
-    "language": {
-        "tooltip": false 
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      }
     },
-
-    "custom/arrow-dark-on-bg-left": {
-        "tooltip": false,
-        "format": ""
+    "cpu": {
+      "format": "{usage}% "
     },
-
-    "custom/arrow-dark-on-light-left": {
-        "tooltip": false,
-        "format": ""
+    "memory": {
+      "format": "{}% ",
+      "on-click": "alacritty -e btm"
     },
-
-    "custom/arrow-light-on-dark-left": {
-        "tooltip": false,
-        "format": ""
+    "disk": {
+      "format": "{percentage_used}% ",
+      "interval": 60
     },
-
-    "custom/arrow-light-on-bg-right": {
-        "tooltip": false,
-        "format": ""
+    "network": {
+      "interface": "e*",
+      "format-wifi": "{bandwidthDownBits:>5}{bandwidthDownBits:>5} {essid}({signalStrength}%) ",
+      "format-ethernet": "{bandwidthDownBits:>5}{bandwidthUpBits:>5}",
+      "format-disconnected": "Disconnected ⚠",
+      "interval": 1
     },
-
-    "custom/arrow-dark-on-light-right": {
-        "tooltip": false,
-        "format": ""
+    "pulseaudio": {
+      "scroll-step": 5,
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-muted": "🔇",
+      "format-icons": {
+        "headphones": "🎧",
+        "handsfree": "",
+        "headset": "",
+        "phone": "📞",
+        "portable": "",
+        "car": "",
+        "default": "🔊"
+      },
+      "on-click": "pavucontrol"
     },
-    "custom/pipewire": {
-        "exec": "pw-volume status",
-        "return-type": "json",
-        "interval": "once",
-        "signal": 8,
-        "format": "{icon} {percentage}",
-        "format-icons": {
-            "mute": "",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        }
+    "custom/power": {
+      "format": "",
+      "on-click": "nwgbar",
+      "tooltip": false
+    },
+    "custom/arch": {
+      "format": "",
+      "on-click": "nwg-drawer -c 7 -is 70 -spacing 23"
+    },
+    "custom/gap": {
+      "format": " "
+    },
+    "custom/media": {
+      "format": "{icon} {}",
+      "return-type": "json",
+      "max-length": 40,
+      "format-icons": {
+        "spotify": "",
+        "default": "🎵"
+      },
+      "escape": true,
+      "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+    },
+    "custom/network": {
+      "format": "{}",
+      "return-type": "json",
+      "max-length": 40,
+      "exec": "$HOME/.config/waybar/scripts/network.py 2> /dev/null"
+    },
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-theme": "Reversal-black-dark",
+      "icon-size": 20,
+      "on-click": "activate",
+      "markup": true,
+      "max-length": 9,
+      "on-click-right": "minimize",
+      "on-click-middle": "close"
     }
-}
+  }

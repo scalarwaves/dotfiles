@@ -43,8 +43,8 @@ keybinds:
         - action: [Resize: Decrease,]
           key: [ Alt: '-']
         # uncomment this and adjust key if using copy_on_select=false
-        # - action: [Copy: ]
-        #   key: [ Alt: 'c']
+        - action: [Copy: ]
+          key: [ Alt: 'c']
     locked:
         - action: [SwitchToMode: Normal,]
           key: [Ctrl: 'g',]

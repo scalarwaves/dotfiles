@@ -1,165 +1,117 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: my-queue;
-    font-size: 13px;
+    /* font-family: Source Code Pro; */
+    font-family: FiraCode Nerd Font; 
+    font-size: 14px;
     min-height: 0;
 }
 
-#waybar {
-    background: #1d2021;
-    color: #fbf1c7;
+window#waybar {
+    /*background: #282828;*/
+    background: #1e1e2e;
+    /* background: transparent; */
+    color: #dcdfe4;
+    margin: 10px;
+    padding: 10px;
 }
 
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-    padding: 0 7px;
-    background: #282828;
-    color: #fbf1c7;
+    background: #282c34;
+    color: #dcdfe4;
+    border-right: 2px solid #1d2021;
 }
 
-#workspaces button:hover {
-    background: #fabd2f;
-    color: #282828;
-}
-
-#workspaces button.focused {
-    background: #3c3836;
-    box-shadow: inset 0 -3px #d65d0e;
-}
-
-#workspaces button.focused:hover {
-    background: #3c3836;
-    color: #fbf1c7;
+#window, #network {
+    padding: 0 20px;
+    background: transparent;
+    color: #c4c8c5;
+    font-size: 12px;
 }
 
 #workspaces button.urgent {
-    background: #fb4934;
+    color: #e06c75;
+}
+#workspaces button.focused {
+    color: #98c379;
+    /*border-bottom: 2px solid #b8bb26;*/
 }
 
-#workspaces button.visible {
-    background: #3c3836;
+#clock.1, #clock.2, #battery, #cpu, #memory, #backlight, #pulseaudio, #custom-mpd, #custom-playerctl, #tray, #mode, #idle_inhibitor, #custom-arch, #custom-media, #custom-network, #custom-power, #disk, #mode {
+    padding: 0 10px;
+    margin: 0 0px;
+    background: #1e1e2e;
+    color: #dcdfe4
+    /*border-left: 2px solid #1d2021;*/
 }
 
-#workspaces button.visible:hover {
-    background: #fabd2f;
-    color: #282828;
+#disk {
+    color: #b16286;
 }
 
-#mode {
-    background: #3c3836;
-}
-
-/*
- * General background config
- */
-#cpu,
-#pulseaudio,
-#temperature,
-#battery,
-#tray {
-    padding: 0 7px;
-    background: #282828;
-}
-
-#network,
-#memory,
-#backlight,
-#language,
-#custom-crypto {
-    padding: 0 7px;
-    background: #3c3836;
-}
-
-/*
- * Arrows config
- */
-#custom-arrow-dark-on-bg-left {
-    font-size: 20px;
-    color: #282828;
-    background: #1d2021;
-}
-
-#custom-arrow-light-on-dark-left {
-    font-size: 20px;
-    color: #3c3836;
-    background: #282828;
-}
-
-#custom-arrow-dark-on-light-left,
-#custom-arrow-dark-on-light-right {
-    font-size: 20px;
-    color: #282828;
-    background: #3c3836;
-}
-
-#custom-arrow-light-on-bg-right {
-    font-size: 20px;
-    color: #3c3836;
-    background: #1d2021;
-}
-
-/*
- * Battery config
- */
-#battery.warning {
+#cpu {
     color: #fabd2f;
 }
 
-#battery.critical {
-    color: #fb4934;
+#memory {
+    color: #eba0ac;
 }
 
-#battery.charging {
-    color: #b8bb26;
+#battery {
+    color: #8ec07c;
 }
 
-#battery.plugged {
-    color: #b8bb26;
+#clock.2, #clock.1 {
+    background: #45475a;
+    color: white;
 }
 
-/*
- * Network config
- */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
 #network.disconnected {
     color: #fb4934;
-}
-
-/*
- * Audio config
- */
-#pulseaudio.bluetooth {
-    color: #458588;
 }
 
 #pulseaudio.muted {
     color: #fb4934;
 }
 
-/*
- * CPU config
- */
-#cpu.warning {
-    color: #fabd2f;
+#pulseaudio {
+    color: #7f849c;
 }
 
-#cpu.critical {
-    color: #fb4934;
+#custom-media { 
+    color: #9399b2;
 }
 
-/*
- * Temperature config
- */
-#temperature.critical {
-    color: #fb4934;
+#tray {
+    background-color: #181825;
 }
 
-/*
- * Memory config
- */
-#memory.warning {
-    color: #fabd2f;
+#idle_inhibitor {
+    background-color: #181825;
+    padding: 0px 10px;
+    border-left: 2px solid #1d2021;
 }
 
-#memory.critical {
-    color: #fb4934;
+#custom-power {
+    background-color: #e06c75;
+    padding: 0px 10px;
+    border-left: 2px solid #1d2021;
+}
+
+#custom-arch {
+    color: #6c7086;
+    background: #1d2021;
+    font-size: 22px;
+    padding: 0px 10px;
+}
+#custom-gap {
+    padding: 0px 1px;
 }
