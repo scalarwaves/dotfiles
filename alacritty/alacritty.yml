@@ -1,0 +1,51 @@
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+# Gruvbox Dark
+colors:
+  # Default colors
+  primary:
+    background: '0x1d1d1d'
+    foreground: '0xe5d3a2'
+
+  # Cursor colors
+  cursor:
+    text:   '0x1d1d1d'
+    cursor: '0xe5d3a2'
+
+  # Normal colors
+  normal:
+    black:   '0x1d1d1d'
+    red:     '0xbe0e17'
+    green:   '0x868715'
+    yellow:  '0xcc871a'
+    blue:    '0x377274'
+    magenta: '0x9f4b73'
+    cyan:    '0x568d57'
+    white:   '0x978771'
+
+  # Bright colors
+  bright:
+    black:   '0x7f7060'
+    red:     '0xf63028'
+    green:   '0xa9b01d'
+    yellow:  '0xf7b024'
+    blue:    '0x709585'
+    magenta: '0xc76f89'
+    cyan:    '0x7db568'
+    white:   '0xe5d3a2'
+key_bindings:
+    - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+window.opacity: 1.0
+window:
+  padding:
+    x: 20
+    y: 20
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  size: 12
+live_config_reload: true
+dynamic_padding: true
+shell:
+  program: /usr/bin/fish

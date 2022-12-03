@@ -43,7 +43,7 @@ set $emoji rofi -modi emoji -show emoji
     # Start a floating terminal
     bindsym $mod+Return exec $term-float
     # Open the power menu
-    bindsym $mod+X exec wlogout
+    bindsym $mod+X exec nwgbar
     # Kill focused window
     bindsym $mod+q kill
     # Start your launcher
@@ -262,7 +262,8 @@ exec mkfifo $SWAYSOCK.wob
 exec tail -f $SWAYSOCK.wob | wob --border-color '#ffdcbb8c' --background-color '#cc3a3a3a' --bar-color '#ffdcbb8c'
 # sov
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
-exec swaywsr --icons awesome --no-names --remove-duplicates --config $XDG_CONFIG_HOME/swaywsr/config.toml
+exec sworkstyle -d
+#exec swaywsr --icons awesome --no-names --remove-duplicates --config $XDG_CONFIG_HOME/swaywsr/config.toml
 # Autotiling
 exec autotiling
 # Wlsunset
@@ -295,12 +296,12 @@ set $laptop <eDP-1>
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always ~/.config/sway/scripts/clamshell.sh
-
+exec ~/.cargo/bin/wpaperd
 ### Input configuration
 # Example configuration:
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
-input 2:7:SynPS/2_Synaptics_Touchpad {
+input "2:7:SynPS/2_Synaptics_Touchpad" {
     left_handed disabled
     tap enabled
     natural_scroll disabled

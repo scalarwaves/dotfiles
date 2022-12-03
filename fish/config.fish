@@ -147,27 +147,27 @@ alias yug="paru -Syyua --devel --noconfirm --needed --color auto"
 #rust equivalents and aliases
 alias car=cargo
 #alias cd=zoxide
-alias cm="cargo make"
+#alias cm="cargo make"
 #alias cp=fcp
 #alias cp=xcp
-alias cut=tuc
-alias du=dua
+#alias cut=tuc
+#alias du=dua
 #alias mv=pmv
-alias nvm=fnm
+#alias nvm=fnm
 #alias ps=procs
 #alias reflector=asu
 #alias rm=rip
 #alias sed=sd
-alias sloc=tokei
-alias sysctl=systeroid
-alias tail=staart
+#alias sloc=tokei
+#alias sysctl=systeroid
+#alias tail=staart
 #alias time=rtime
 #alias time=tally
-alias top=btm
-alias topgrade=topgrade-rs
+#alias top=btm
+#alias topgrade=topgrade-rs
 #alias touch=riptouch
 alias tree=tree-rs
-alias wc=cw
+#alias wc=cw
 alias xcd='cd "$(xplr --print-pwd-as-result)"'
 # debian (I use Arch now)
 #alias aar="sudo add-apt-repository"
@@ -273,5 +273,5 @@ source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 # volta (npm)
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
-clear
-macchina
+#clear
+#macchina

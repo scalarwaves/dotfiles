@@ -1,0 +1,13 @@
+address = 'Kissimmee,US'
+language = 'en_US'
+
+[units]
+temperature = 'fahrenheit'
+speed = 'mph'
+time = 'military'
+precipitation = 'inch'
+
+[gui]
+border = 'rounded'
+graph = 'lines'
+greeting = false

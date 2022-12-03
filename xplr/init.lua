@@ -1,4 +1,4 @@
-version = "0.19.4"
+version = "0.20.0"
 ---@diagnostic disable
 local xplr = xplr -- The globally exposed configuration to be overridden.
 ---@diagnostic enable
@@ -2693,7 +2693,6 @@ require("xpm").setup({
     { name = 'sayanarijit/material-landscape.xplr' },
     { name = 'sayanarijit/material-landscape2.xplr' },
     { name = 'sayanarijit/zentable.xplr' },
-    { name = 'prncss/icons.xplr' },
     { name = 'dtomvan/extra-icons.xplr' },
     {}
   },

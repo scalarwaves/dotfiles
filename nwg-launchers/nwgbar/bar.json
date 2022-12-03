@@ -1,12 +1,12 @@
 [
   {
     "name": "Lock screen",
-    "exec": "swaylock -C ~/.config/swaylock/config",
+    "exec": "swaylock",
     "icon": "/usr/share/nwg-launchers/nwgbar/images/lock.svg"
   },
   {
   	"name": "Suspend",
-  	"exec": "systemctl suspend;swaylock -C ~/.config/swaylock/config",
+    "exec": "systemctl suspend",
   	"icon": "/usr/share/nwg-launchers/nwgbar/images/suspend.svg"
   },
   {

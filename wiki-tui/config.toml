@@ -1,0 +1,51 @@
+[api]
+base_url = 'https://en.wikipedia.org/'
+
+[theme]
+text = 'white'
+title = 'red'
+highlight = 'red'
+background = 'black'
+search_match = 'red'
+highlight_text = 'white'
+highlight_inactive = 'black'
+
+[logging]
+enabled = true
+log_dir = 'wiki_tui.log'
+log_level = 'INFO'
+
+[features]
+links = true
+toc = true
+[keybindings.down]
+key = 'down'
+mode = 'normal'
+
+[keybindings.up]
+key = 'up'
+mode = 'normal'
+
+[keybindings.left]
+key = 'left'
+mode = 'normal'
+
+[keybindings.right]
+key = 'right'
+mode = 'normal'
+
+[keybindings.focus_next]
+key = 'tab'
+mode = 'normal'
+
+[keybindings.focus_prev]
+key = 'tab'
+mode = 'shift'
+[settings.toc]
+position = 'Right'
+title = 'Default'
+min_width = 20
+max_width = 60
+scroll_x = true
+scroll_y = true
+item_format = '{NUMBER} {TEXT}'

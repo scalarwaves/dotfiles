@@ -1,45 +1,54 @@
 #!/usr/bin/env bash
 
 echo ".-=installing dotfiles=-."
+echo ".-=installing alacritty"
+ln -sv ./alacritty ~/.config/alacritty
 echo ".-=installing bat=-."
-cp -R ./bat ~/.config/
+ln -sv ./bat ~/.config/bat
 echo ".-=installing bottom=-."
-cp -R ./bottom ~/.config/
+ln -sv ./bottom ~/.config/bottom
 echo ".-=installing calcurse=-."
-cp -R ./calcurse ~/.config/
+ln -sv ./calcurse ~/.config/calcurse
 echo ".-=installing fish=-."
-cp -R ./fish ~/.config/
+ln -sv ./fish ~/.config/fish
 echo ".-=installing foot=-."
-cp -R ./foot ~/.config/
+ln -sv ./foot ~/.config/foot
 echo ".-=installing helix=-."
-cp -R ./helix ~/.config/
+ln -sv ./helix ~/.config/helix
 echo ".-=installing himalaya=-."
-cp -R ./himalaya ~/.config/
+ln -sv ./himalaya ~/.config/himalaya
+echo ".-=installing hyprland=-."
+ln -sv ./hypr ~/.config/hypr
 echo ".-=installing kitty=-."
-cp -R ./kitty ~/.config/
+ln -sv ./kitty ~/.config/kitty
 echo ".-=installing macchina=-."
-cp -R ./macchina ~/.config/
+ln -sv ./macchina ~/.config/macchina
 echo ".-=installing mako=-."
-cp -R ./mako ~/.config/
+ln -sv ./mako ~/.config/mako
 echo ".-=installing micro=-."
-cp -R ./micro ~/.config/
+ln -sv ./micro ~/.config/micro
 echo ".-=installing nwg-suite=-."
-cp -R ./nwg* ~/.config/
+ln -sv ./nwg-drawer ~/.config/nwg-drawer
+ln -sv ./nwg-launchers ~/.config/nwg-launchers
+ln -sv ./nwg-look ~/.config/nwg-look
 echo ".-=installing ranger=-."
-cp -R ./ranger ~/.config/
+ln -sv ./ranger ~/.config/ranger
 echo ".-=installing rofi=-."
-cp -R ./rofi ~/.config/
+ln -sv ./rofi ~/.config/rofi
+echo ".-=installing starship=-."
+ln -sv ./starship.toml ~/.config/starship.toml
 echo ".-=installing sway=-."
-cp -R ./sway* ~/.config/
+ln -sv ./sway ~/.config/sway
+ln -sv ./swaycons ~/.config/swaycons
+ln -sv ./swaylock ~/.config/swaylock
+ln -sv ./swayr ~/.config/swayr
+echo ".-=installing topgrade=-."
+ln -sv ./topgrade.toml ~/.config/starship.toml
 echo ".-=installing waybar=-."
-cp -R ./waybar ~/.config/
+ln -sv ./waybar ~/.config/waybar
 echo ".-=installing xplr=-."
-cp -R ./xplr ~/.config/
+ln -sv ./xplr ~/.config/xplr
 echo ".-=installing zathura=-."
-cp -R ./zathura ./config/
+ln -sv ./zathura ./config/zathura
 echo ".-=installing zellij=-."
-cp -R ./zellij ./config/
-cp ~/.cargo/bin/dotter .
-chmod +x ./dotter
-./dotter -V
-# ./dotter -v
+ln -sv ./zellij ./config/zellij

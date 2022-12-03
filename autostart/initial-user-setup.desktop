@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=System;Monitor;
+Comment=Does the initial user setup
+Exec=systemctl --user enable --now gamemoded;setup_dxvk install;rm ~/.config/autostart/initial-user-setup.desktop
+Icon=setup
+Name=Initial user setup
+StartupNotify=false
+Terminal=false
+Type=Application

@@ -1,0 +1,77 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Actions=Configure;Capture;Launcher;
+Categories=Graphics;
+Comment=Powerful yet simple to use screenshot software.
+Comment[de]=Schlichte, leistungsstarke Screenshot-Software
+Comment[es]=Software de captura de pantalla potente y fácil de usar.
+Comment[fr]=Logiciel de capture d'écran puissant et simple d'utilisation.
+Comment[ja]=パワフルで使いやすいスクリーンショットソフトウェア。
+Comment[pl]=Proste w użyciu narzędzie do zrzutów ekranu
+Comment[ru]=Простой и функциональный инструмент для создания скриншотов
+Comment[sk]=Mocný, no tiež jednoduchý softvér na zachytávanie obrazovky.
+Comment[sr]=Једноставан, а моћан алат за снимање екрана
+Comment[uk]=Потужний простий у використанні додаток для створення знімків екрану.
+Comment[zh_CN]=强大又易用的屏幕截图软件
+Exec=flameshot
+GenericName=Screenshot tool
+GenericName[es]=Herramienta de captura de pantalla
+GenericName[fr]=Outil de capture d'écran
+GenericName[ja]=スクリーンショットツール
+GenericName[pl]=Zrzuty ekranu
+GenericName[ru]=Создание скриншотов
+GenericName[sk]=Nástroj na zachytávanie obrazovky
+GenericName[sr]=Снимач екрана
+GenericName[uk]=Інструмент скриншотів
+GenericName[zh_CN]=屏幕截图工具
+Icon=org.flameshot.Flameshot
+Keywords=flameshot;screenshot;capture;shutter;
+Keywords[de]=flameshot;screenshot;Bildschirmfoto;Aufnahme;
+Keywords[es]=flameshot;screenshot;capture;shutter;captura;
+Keywords[fr]=flameshot;capture d'écran;capter;shutter;
+Keywords[ja]=flameshot;screenshot;capture;shutter;スクリーンショット;キャプチャー;
+Keywords[zh_CN]=flameshot;screenshot;capture;shutter;截图;屏幕;
+Name=Flameshot
+Name[zh_CN]=火焰截图
+StartupNotify=false
+Terminal=false
+TryExec=flameshot
+Type=Application
+X-DBUS-ServiceName=org.flameshot.Flameshot
+X-DBUS-StartupType=Unique
+X-KDE-DBUS-Restricted-Interfaces=org_kde_kwin_effect-screenshot
+
+[Desktop Action Configure]
+Exec=flameshot config
+Name=Configure
+Name[de]=Einstellungen
+Name[es]=Configurar
+Name[fr]=Configurer
+Name[ja]=設定
+Name[pl]=Konfiguruj
+Name[ru]=Настройки
+Name[sk]=Nastaviť
+Name[sr]=Подешавања
+Name[uk]=Налаштувати
+Name[zh_CN]=配置
+
+[Desktop Action Capture]
+Exec=flameshot gui --delay 500
+Name=Take screenshot
+Name[de]=Bildschirmfoto aufnehmen
+Name[es]=Tomar captura de pantalla
+Name[fr]=Prendre une capture d'écran
+Name[ja]=スクリーンショットを撮る
+Name[pl]=Zrzut ekranu
+Name[ru]=Сделать скриншот
+Name[sk]=Zachytiť obrazovku
+Name[sr]=Сними екран
+Name[uk]=Зробити знімок
+Name[zh_CN]=进行截图
+
+[Desktop Action Launcher]
+Exec=flameshot launcher
+Name=Open launcher
+Name[de]=Starter öffnen
+Name[sk]=Otvoriť spúšťač
+Name[zh_CN]=打开启动器

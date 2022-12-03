@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=System;Monitor;
+Comment=Does the initial Bashrc setup
+Exec=mv ~/.bashrc_garuda ~/.bashrc; rm ~/.config/autostart/bashrc-setup.desktop
+Icon=setup
+Name=Initial Bashrc setup
+StartupNotify=false
+Terminal=false
+Type=Application
