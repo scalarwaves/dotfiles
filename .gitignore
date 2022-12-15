@@ -1,4 +1,5 @@
-.dotter/local.toml
-.dotter/cache.toml
-.dotter/cache
+config
+.dots
 ptags.fish
+*.sh
+cargo*.txt

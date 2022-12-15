@@ -2,7 +2,7 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["system", "emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choosenim", "composer", "conda", "config_update", "containers", "deb_get", "dotnet", "firmware", "flatpak", "flutter", "fossil", "gcloud", "github_cli_extensions", "git_repos", "go", "haxelib", "gnome_shell_extensions", "home_manager", "jetpack", "kakoune", "krew", "macports", "mas", "myrepos", "nix", "pacstall", "pearl", "powershell", "raco", "remotes", "restarts", "rtcl", "scoop", "sdkman", "sheldon", "snap", "spicetify", "stack", "toolbx", "vagrant", "vcpkg", "vim", "winget", "wsl", "yadm"]
+disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choosenim", "composer", "conda", "config_update", "containers", "deb_get", "dotnet", "firmware", "flatpak", "flutter", "fossil", "gcloud", "github_cli_extensions", "git_repos", "go", "haxelib", "gnome_shell_extensions", "home_manager", "jetpack", "kakoune", "krew", "macports", "mas", "myrepos", "nix", "pacstall", "pearl", "powershell", "raco", "remotes", "restarts", "rtcl", "scoop", "sdkman", "sheldon", "snap", "spicetify", "stack", "toolbx", "vagrant", "vcpkg", "vim", "winget", "wsl", "yadm"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -61,7 +61,7 @@ disable = ["system", "emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolate
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-"Cargo Save" = "~/.bin/cargosave"
+"Cargo Save" = "~/.bin/cargosave.fish"
 
 [brew]
 #greedy_cask = true

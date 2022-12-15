@@ -1,0 +1,12 @@
+.workspace {
+    padding: 6px;
+
+    &.focused {
+        border-radius: 3px;
+        background-color: {{light_black}};
+    }
+}
+
+.workspace:hover {
+    background: {{light_red}};
+}

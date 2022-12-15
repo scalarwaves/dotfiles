@@ -60,18 +60,22 @@ description: Tool for finding issues in CommonMark documents
 description: A CLI task runner defined by a simple markdown file
 description: cat for markdown: Show markdown documents in terminals
 description: A simple program to generate a markdown table for the user
+description: terminal mail client
 description: An emoji fuzzy finder cli written in rust 🦀✨
 description: A multiplatform Rust clone of cmatrix
 description: A driver of multiple linters
 description: 🧵 A command line memory usage information tool.
+description: A program to find and interact with a Neovim instance running in a
 description: A command-line utility for easily compressing and decompressing files and directories.
 description: A command-line tool to generate, analyze, convert and manipulate colors
 description: A commandline-utility to interactively build complex shell pipelines
 description: A command line podcast manager
 description: A modern replacement for ps
 description: A parallel universal-ctags wrapper for git repository
+description: Basic interface to PipeWire volume controls
 description: xargs + awk with pattern matching support.
 description: Constant-frequency recursive CLI web scraper with frequency, filtering, file directory, and many other options for scraping HTML, images and other files.
+description: Embedded scripting for Rust
 description: ripgrep is a line-oriented search tool that recursively searches the current
 description: A simple touch rip off that can add custom text in the begining.
 description: rip: a safe and ergonomic alternative to rm
@@ -83,11 +87,13 @@ description: Minimalist rsync clone in Rust
 description: Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using the S3 API.
 description: An intuitive find & replace CLI
 description: A thin command line interface over the semver crate
+description: An organizing tool for terminal lovers who hate organizing
 description: Fuzzy Finder in rust!
 description: An open-source Shazam client for Linux, written in Rust.
 description: A simple Spotify CLI primarily made for monitoring what songs you're listening to and displaying that in your bar of choice like waybar or polybar.
 description: A command driven spotify player
 description: A code formatter for Lua
+description: svgcleaner could help you to clean up your SVG files from the unnecessary data.
 description: Simple Alt-Tab daemon for SwayWM. Switches back to previous focused window on SIGUSR1
 description: swaycons adds nerd font icons to sway window titles
 description: swaysome provides a different way to manage your multiple outputs with the sway windows manager
@@ -98,6 +104,7 @@ description: A CLI for Taplo TOML toolkit
 description: Fetch and show tldr help pages for many CLI commands. Full featured offline client with caching support.
 description: Terminal file explorer
 description: Terminal Music Player written in Rust. Can download music from youtube(netease/migu/kugou) and then embed lyrics and album photos into mp3/m4a/flac/wav/ogg vorbis files.
+description: Creates a png image from text. Useful to protect sensitive information from bots and scrapers, such as email addresses and telephone numbers in web pages, and even passwords sent via email
 description: Command-line tool to find build artifacts and thing occupying space on your computer. Shatters records not glass.
 description: Digital clock for the terminal
 description: Tokay is a programming language designed for ad-hoc parsing, inspired by awk.
@@ -109,10 +116,12 @@ description: Upgrade all the things
 description: trashy is a simple, fast, and featureful alternative to rm and trash-cli.
 description: tree-rs is a cross platform reimplementation of the linux *tree* command.
 description: one CLI to format the code tree
+description: Build, bundle & ship your Rust WASM application to the web.
 description: When cut doesn't cut it
 description: A terminal feed reader with a fancy ui
 description: Install and manage dev tools with multiple environments
 description: View images right from the terminal.
+description: 📦✨ your favorite rust -> wasm workflow tool!
 description: A simple and easy to use Wikipedia Text User Interface
 description: Weather companion for the terminal
 description: XCompress is a free file archiver utility on Linux, providing multi-format archiving to and extracting from ZIP, Z, GZIP, BZIP2, LZ, XZ, LZMA, 7ZIP, TAR, RAR and ZSTD.

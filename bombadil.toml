@@ -1,0 +1,47 @@
+# Path to your dotfiles relative to your $HOME directory
+dotfiles_dir = "dotfiles"
+
+[settings]
+# An array of toml files paths containing the variables to inject in your templatized dotfiles
+# You can have multiple var files as long as variable names does not colide.
+vars = [ "vars.toml" ]
+
+# An array of post install shell commands
+posthooks = [ "sway reload" ]
+
+[settings.dots]
+
+# You can have as many dot entry as you want, linking files or directories
+alacritty = { source = "alacritty", target = ".config/alacritty" }
+autostart = { source = "autostart", target = ".config/autostart" }
+bat = { source = "bat", target = ".config/bat" }
+bottom = { source = "bottom", target = ".config/bottom" }
+broot = { source = "broot", target = ".config/broot" }
+calcurse = { source = "calcurse", target = ".config/broot" }
+comrak = { source = "comrak", target = ".config/comrak" }
+fish = { source = "fish", target = ".config/fish" }
+helix = { source = "helix", target = ".config/helix" }
+himalaya = { source = "himalaya", target = ".config/himalaya" }
+hyprland = { source = "hypr", target = ".config/hypr" }
+kitty = { source = "kitty", target = ".config/kitty" }
+macchina = { source = "macchina", target = ".config/macchina" }
+mako = { source = "mako", target = ".config/mako" }
+micro = { source = "micro", target = ".config/micro" }
+nwg_drawer = { source = "nwg-drawer", target = ".config/nwg-drawer" }
+nwg_launchers = { source = "nwg-launchers", target = ".config/nwg-launchers" }
+nwg_look = { source = "nwg-look", target = ".config/nwg-look" }
+rofi = { source = "rofi", target = ".config/rofi" }
+spotify_player = { source = "spotify-player", target = ".config/spotify-player" }
+starship = { source = "starship.toml", target = ".config/starship.toml" }
+sway = { source = "sway", target = ".config/sway" }
+swaycons = { source = "swaycons", target = ".config/swaycons" }
+swaylock = { source = "swaylock", target = ".config/swaylock" }
+swayr = { source = "swayr", target = ".config/swayr" }
+topgrade = { source = "topgrade.toml", target = ".config/topgrade.toml" }
+waybar = { source = "waybar", target = ".config/waybar" }
+weathercrab = { source = "weathercrab", target = ".config/weathercrab" }
+wiki_tui = { source = "wiki-tui", target = ".config/wiki-tui" }
+wpaperd = { source = "wpaperd", target = ".config/wpaperd" }
+xplr = { source = "xplr", target = ".config/xplr" }
+zathura = { source = "zathura", target = ".config/zathura" }
+zellij = { source = "zellij", target = ".config/zellij" }
