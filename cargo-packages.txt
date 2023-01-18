@@ -30,6 +30,7 @@ colortty
 comrak
 create-tauri-app
 crowbook
+detox
 digestify
 du-dust
 dua-cli
