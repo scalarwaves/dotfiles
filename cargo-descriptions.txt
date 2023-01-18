@@ -1,5 +1,6 @@
 description: A cat(1) clone with wings.
 description: Automatically generates Rust FFI bindings to C and C++ libraries.
+description: Cross-platform binary parser and colorizer
 description: A customizable cross-platform graphical process/system monitor for the terminal. Supports Linux, macOS, and Windows.
 description: Bulk rename files with your text editor, like ranger and qmv
 description: A new file manager
@@ -22,6 +23,7 @@ description: A cargo subcommand for checking and applying updates to installed e
 description: A tool for generating C bindings to Rust code.
 description: Sexy ANSI fonts for the console
 description: Changelog generator
+description: Crate help in terminal: A tool for looking up details about rust crates without going to crates.io
 description: CommonMark to html converter.
 description: CLI-App: COmpare, COpy & MOve directories and files.
 description: A utility to generate color schemes for alacritty
@@ -29,13 +31,18 @@ description: A 100% CommonMark-compatible GitHub Flavored Markdown parser and fo
 description: Rapidly scaffold out a new tauri app project.
 description: Render a Markdown book in HTML, PDF or Epub
 description: Verify a file against a provided digest/hash/checksum.
+description: A more intuitive version of du
 description: A tool to conveniently learn about the disk usage of directories, fast!
 description: Command line tool to analyze disk usage
+description: A shell-script-centric task scheduler; uses exit codes to determine control flow
 description: A modern replacement for ls
+description: CLI for Exomind, a personal knowledge management tool
 description: fd is a simple, fast and user-friendly alternative to find.
 description: ff is a simple and fast utility for finding files on Unix commandline. It also supports complex filters like GNU find.
+description: Easily and securely share files from the command line.
 description: an efficient Awk-like language
 description: A syntax-highlighting pager for git
+description: blazing fast terminal-ui for git
 description: An utility for hidden file/directory
 description: Command-line interface for email management.
 description: Yet another HTTPie clone
@@ -50,12 +57,13 @@ description: 🤖 Just a command runner
 description: A tridirectional converter between Json, Yaml, and Toml
 description: A small binary for converting KDL to XML
 description: A utility to sync local authorized_keys file updated with your with Github, Gitlab, and Launchpad public keys
+description: kignore is a tool for easily adding patterns to .gitignore and cleaning up afterwards
 description: Linux kernel manager and activity monitor
 description: A jq-like cli tool that can query and transform kdl right in the command line
 description: Manage LLVM/Clang builds
 description: Rust CLI tool for searching through codebase files quickly
 description: A tool to download and embed lyrics from multiple sources 
-description: A system information fetcher, with an (unhealthy) emphasis on performance.
+description: A system information fetcher with an emphasis on performance.
 description: Tool for finding issues in CommonMark documents
 description: A CLI task runner defined by a simple markdown file
 description: cat for markdown: Show markdown documents in terminals
@@ -65,6 +73,7 @@ description: An emoji fuzzy finder cli written in rust 🦀✨
 description: A multiplatform Rust clone of cmatrix
 description: A driver of multiple linters
 description: 🧵 A command line memory usage information tool.
+description: Google Calendar Command Line Interface
 description: A program to find and interact with a Neovim instance running in a
 description: A command-line utility for easily compressing and decompressing files and directories.
 description: A command-line tool to generate, analyze, convert and manipulate colors
@@ -79,17 +88,21 @@ description: Embedded scripting for Rust
 description: ripgrep is a line-oriented search tool that recursively searches the current
 description: A simple touch rip off that can add custom text in the begining.
 description: rip: a safe and ergonomic alternative to rm
+description: Create code badges from the comfort and safety of Rust
 description: rsdate connects to an ntp server, printing the returned time and/or sets the system clock.
 description: Secure jailed AUR helper for Arch Linux
+description: A cli tool that let's you map commands to a shorter alias
 description: A tool to generate hashes from the command line.
 description: Create ctags/etags for a cargo project and all of its dependencies
 description: Minimalist rsync clone in Rust
 description: Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using the S3 API.
 description: An intuitive find & replace CLI
 description: A thin command line interface over the semver crate
+description: A terminal-based podcast manager to subscribe to and play podcasts.
 description: An organizing tool for terminal lovers who hate organizing
 description: Fuzzy Finder in rust!
 description: An open-source Shazam client for Linux, written in Rust.
+description: Fast and lightweight tool to scan your disk space.
 description: A simple Spotify CLI primarily made for monitoring what songs you're listening to and displaying that in your bar of choice like waybar or polybar.
 description: A command driven spotify player
 description: A code formatter for Lua
@@ -103,11 +116,11 @@ description: A terminal user interface for managing kernel parameters
 description: A CLI for Taplo TOML toolkit
 description: Fetch and show tldr help pages for many CLI commands. Full featured offline client with caching support.
 description: Terminal file explorer
-description: Terminal Music Player written in Rust. Can download music from youtube(netease/migu/kugou) and then embed lyrics and album photos into mp3/m4a/flac/wav/ogg vorbis files.
+description: Terminal Music and Podcast Player written in Rust. Can download music from youtube(netease/migu/kugou) and then embed lyrics and album photos into mp3/m4a/flac/wav/ogg vorbis files.
 description: Creates a png image from text. Useful to protect sensitive information from bots and scrapers, such as email addresses and telephone numbers in web pages, and even passwords sent via email
 description: Command-line tool to find build artifacts and thing occupying space on your computer. Shatters records not glass.
 description: Digital clock for the terminal
-description: Tokay is a programming language designed for ad-hoc parsing, inspired by awk.
+description: Tokay is a programming language designed for ad-hoc parsing.
 description: Count your code, quickly.
 description: 🍅 A command-line tool to get and set values in toml files while preserving comments and formatting.
 description: A simple CLI for editing and querying TOML files.
@@ -122,6 +135,7 @@ description: A terminal feed reader with a fancy ui
 description: Install and manage dev tools with multiple environments
 description: View images right from the terminal.
 description: 📦✨ your favorite rust -> wasm workflow tool!
+description: Wasmer CLI
 description: A simple and easy to use Wikipedia Text User Interface
 description: Weather companion for the terminal
 description: XCompress is a free file archiver utility on Linux, providing multi-format archiving to and extracting from ZIP, Z, GZIP, BZIP2, LZ, XZ, LZMA, 7ZIP, TAR, RAR and ZSTD.

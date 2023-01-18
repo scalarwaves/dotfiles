@@ -1,5 +1,6 @@
 bat
 bindgen-cli
+bingrep
 bottom
 bren
 broot
@@ -22,6 +23,7 @@ cargo-update
 cbindgen
 cfonts
 changelog
+chit
 cmark
 cocomo-tui
 colortty
@@ -29,13 +31,18 @@ comrak
 create-tauri-app
 crowbook
 digestify
+du-dust
 dua-cli
 dutree
+evry
 exa
+exm
 fd-find
 ff-find
+ffsend
 frawk
 git-delta
+gitui
 hf
 himalaya
 ht
@@ -50,6 +57,7 @@ just
 jyt
 kdl2xml
 keysync
+kignore
 kmon
 kq
 llvmenv
@@ -65,10 +73,11 @@ moji
 mrs-matrix
 multilint
 musage
+neocal
 neovim-ctrl
 ouch
 pastel
-perseus-cli        v0.4.0-beta.11  v0.3.6 (v0.4.0-beta.11 available)  No
+perseus-cli        v0.3.6     v0.3.6 (v0.4.0-beta.16 available)  No
 pipr
 podcast
 procs
@@ -80,17 +89,21 @@ rhai
 ripgrep
 riptouch
 rm-improved
+rsbadges
 rsdate
 rua
+runner-cli
 rustgenhash
 rusty-tags
 rusync
 sccache
 sd
 semvercli
+shellcaster
 sigi
 skim
 songrec
+spacedisplay
 spotifatius
 spotify_player
 stylua
@@ -123,6 +136,7 @@ tuifeed
 vers
 viu
 wasm-pack
+wasmer-cli
 wiki-tui
 wthrr
 xcompress

@@ -18,6 +18,6 @@
 
 [helix](https://github.com/helix-editor/helix) is my modal editor
 
-[dotter](https://github.com/SuperCuber/dotter) is my dotfile manager
+[toml-bombadil](https://github.com/oknozor/toml-bombadil) is my dotfile manager
 
 [xplr](https://github.com/sayanarijit/xplr) is my file manager 
