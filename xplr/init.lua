@@ -1,4 +1,4 @@
-version = "0.20.0"
+version = "0.21.2"
 ---@diagnostic disable
 local xplr = xplr -- The globally exposed configuration to be overridden.
 ---@diagnostic enable
@@ -63,7 +63,7 @@ local xplr = xplr -- The globally exposed configuration to be overridden.
 -- the errors in the logs.
 --
 -- Type: boolean
-xplr.config.general.disable_debug_error_mode = false
+xplr.config.general.disable_debug_error_mode = true
 
 -- Set it to `true` if you want to enable mouse scrolling.
 --
@@ -454,10 +454,10 @@ xplr.config.general.sort_and_filter_ui.filter_identifiers = {
 -- The identifiers used to denote applied search input.
 --
 -- Type: { format = nullable string, style = [Style](https://xplr.dev/en/style) }
-xplr.config.general.sort_and_filter_ui.search_identifier = {
-  format = "search:",
-  style = {},
-}
+-- xplr.config.general.sort_and_filter_ui.search_identifier = {
+--  format = "search:",
+--  style = {},
+-- }
 
 -- The content for panel title by default.
 --
@@ -2706,7 +2706,7 @@ xplr.config.modes.builtin.default.key_bindings.on_key.x = {
     { SwitchModeCustom = "xpm" },
   },
 }
-require"icons".setup()
+-- require"icons".setup()
 -- Type `Z` to spawn zoxide prompt.
 require("zoxide").setup{
   mode = "default",

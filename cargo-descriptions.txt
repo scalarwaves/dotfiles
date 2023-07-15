@@ -1,9 +1,10 @@
+description: background rust compiler
 description: A cat(1) clone with wings.
 description: Automatically generates Rust FFI bindings to C and C++ libraries.
 description: Cross-platform binary parser and colorizer
+description: Simple, cross-platform, and fast command aliases with superpowers.
 description: A customizable cross-platform graphical process/system monitor for the terminal. Supports Linux, macOS, and Windows.
 description: Bulk rename files with your text editor, like ranger and qmv
-description: A new file manager
 description: Rust binary package installer for CI integration
 description: Create a command line interface binary with some common dependencies ((clap || docopt) and error_chain)
 description: Cargo commands for modifying a `Cargo.toml` file..
@@ -17,69 +18,52 @@ description: A cargo plugin for showing a tree-like overview of a crate's module
 description: Prints package metadata like pip show, apt-cache show, npm view, gem query, etc.
 description: cargo-ssearch: cargo search on steroids
 description: Strip Rust binaries created with cargo
-description: Prints various binary symbols in your crate
 description: A Cargo subcommand that visualizes a crate's dependency graph in a tree-like format
 description: A cargo subcommand for checking and applying updates to installed executables
 description: A tool for generating C bindings to Rust code.
 description: Sexy ANSI fonts for the console
-description: Changelog generator
 description: Crate help in terminal: A tool for looking up details about rust crates without going to crates.io
-description: CommonMark to html converter.
+description: A human-friendly and fast alternative to cut and (sometimes) awk
 description: CLI-App: COmpare, COpy & MOve directories and files.
 description: A utility to generate color schemes for alacritty
-description: A 100% CommonMark-compatible GitHub Flavored Markdown parser and formatter
-description: Rapidly scaffold out a new tauri app project.
-description: Render a Markdown book in HTML, PDF or Epub
-description: Quickly clean up your development directories on disk
+description: Count Words, a fast wc clone
+description: CLI utility to compare directories like a superhero
 description: Verify a file against a provided digest/hash/checksum.
+description: Terminal disk space visual navigator
+description: Binary for dprint code formatter—a pluggable and configurable code formatting platform.
 description: A more intuitive version of du
 description: A tool to conveniently learn about the disk usage of directories, fast!
-description: Command line tool to analyze disk usage
 description: A shell-script-centric task scheduler; uses exit codes to determine control flow
 description: A modern replacement for ls
-description: CLI for Exomind, a personal knowledge management tool
+description: A significantly faster alternative to the classic Unix cp(1) command
 description: fd is a simple, fast and user-friendly alternative to find.
 description: ff is a simple and fast utility for finding files on Unix commandline. It also supports complex filters like GNU find.
 description: Easily and securely share files from the command line.
-description: an efficient Awk-like language
+description: The blazing fast build tool for Rust.
+description: A blazing fast and simple Ruby version manager written in Rust
 description: A syntax-highlighting pager for git
 description: blazing fast terminal-ui for git
+description: Manage your GnuPG keys with ease!
 description: An utility for hidden file/directory
-description: Command-line interface for email management.
 description: Yet another HTTPie clone
 description:     A httpbin reimplementation in rust. Works as a library and as a standalone
 description: Filter out duplicates on the command line. Replacement for `sort | uniq` optimized for speed (10x faster).
 description: Get colors from an image. Optionally sort by most common.
-description: Inline images, CSS, JavaScript and more into a single HTML web page. Quite fast.
-description: A minimalist, encrypted journaling tool
 description: Terminal file manager inspired by ranger
-description: Blaaaazingly fast ⚡ CLI alternative for Obsidian.
+description: ⚡Rapid note management for the terminal.
 description: 🤖 Just a command runner
 description: A tridirectional converter between Json, Yaml, and Toml
-description: A small binary for converting KDL to XML
 description: A utility to sync local authorized_keys file updated with your with Github, Gitlab, and Launchpad public keys
-description: kignore is a tool for easily adding patterns to .gitignore and cleaning up afterwards
-description: Linux kernel manager and activity monitor
-description: A jq-like cli tool that can query and transform kdl right in the command line
-description: Manage LLVM/Clang builds
 description: Rust CLI tool for searching through codebase files quickly
 description: A tool to download and embed lyrics from multiple sources 
 description: A system information fetcher with an emphasis on performance.
-description: Tool for finding issues in CommonMark documents
 description: A CLI task runner defined by a simple markdown file
 description: cat for markdown: Show markdown documents in terminals
-description: A simple program to generate a markdown table for the user
-description: terminal mail client
-description: An emoji fuzzy finder cli written in rust 🦀✨
-description: A multiplatform Rust clone of cmatrix
-description: A driver of multiple linters
 description: 🧵 A command line memory usage information tool.
-description: Google Calendar Command Line Interface
-description: A program to find and interact with a Neovim instance running in a
+description: ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes.
 description: A command-line utility for easily compressing and decompressing files and directories.
 description: A command-line tool to generate, analyze, convert and manipulate colors
 description: A commandline-utility to interactively build complex shell pipelines
-description: A command line podcast manager
 description: A modern replacement for ps
 description: A parallel universal-ctags wrapper for git repository
 description: Basic interface to PipeWire volume controls
@@ -87,16 +71,12 @@ description: xargs + awk with pattern matching support.
 description: Constant-frequency recursive CLI web scraper with frequency, filtering, file directory, and many other options for scraping HTML, images and other files.
 description: Embedded scripting for Rust
 description: ripgrep is a line-oriented search tool that recursively searches the current
-description: A simple touch rip off that can add custom text in the begining.
-description: rip: a safe and ergonomic alternative to rm
 description: Create code badges from the comfort and safety of Rust
 description: rsdate connects to an ntp server, printing the returned time and/or sets the system clock.
-description: Secure jailed AUR helper for Arch Linux
-description: A cli tool that let's you map commands to a shorter alias
+description: Polyglot runtime manager (asdf rust clone)
 description: A tool to generate hashes from the command line.
 description: Create ctags/etags for a cargo project and all of its dependencies
 description: Minimalist rsync clone in Rust
-description: Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using the S3 API.
 description: An intuitive find & replace CLI
 description: A thin command line interface over the semver crate
 description: A terminal-based podcast manager to subscribe to and play podcasts.
@@ -104,48 +84,28 @@ description: An organizing tool for terminal lovers who hate organizing
 description: Fuzzy Finder in rust!
 description: An open-source Shazam client for Linux, written in Rust.
 description: Fast and lightweight tool to scan your disk space.
-description: A simple Spotify CLI primarily made for monitoring what songs you're listening to and displaying that in your bar of choice like waybar or polybar.
 description: A command driven spotify player
 description: A code formatter for Lua
-description: svgcleaner could help you to clean up your SVG files from the unnecessary data.
 description: Simple Alt-Tab daemon for SwayWM. Switches back to previous focused window on SIGUSR1
 description: swaycons adds nerd font icons to sway window titles
 description: swaysome provides a different way to manage your multiple outputs with the sway windows manager
 description: Workspaces with the swayest style! This program will dynamically rename your workspaces to indicate which programs are running in each workspace. It uses the Sway IPC. In the absence of a config file, one will be generated automatically.See ${XDG_CONFIG_HOME}/workstyle/config.yml for  details.
-description: A more powerful alternative to sysctl
-description: A terminal user interface for managing kernel parameters
+description: A prettier version of the time command
 description: A CLI for Taplo TOML toolkit
 description: Fetch and show tldr help pages for many CLI commands. Full featured offline client with caching support.
-description: Terminal file explorer
 description: Terminal Music and Podcast Player written in Rust. Can download music from youtube(netease/migu/kugou) and then embed lyrics and album photos into mp3/m4a/flac/wav/ogg vorbis files.
-description: Creates a png image from text. Useful to protect sensitive information from bots and scrapers, such as email addresses and telephone numbers in web pages, and even passwords sent via email
-description: Command-line tool to find build artifacts and thing occupying space on your computer. Shatters records not glass.
 description: Digital clock for the terminal
-description: Tokay is a programming language designed for ad-hoc parsing.
-description: Count your code, quickly.
-description: 🍅 A command-line tool to get and set values in toml files while preserving comments and formatting.
+description: A dotfile manager.
 description: A simple CLI for editing and querying TOML files.
 description: jq, but from TOML
 description: Upgrade all the things
-description: trashy is a simple, fast, and featureful alternative to rm and trash-cli.
-description: tree-rs is a cross platform reimplementation of the linux *tree* command.
-description: one CLI to format the code tree
-description: Build, bundle & ship your Rust WASM application to the web.
 description: When cut doesn't cut it
 description: A terminal feed reader with a fancy ui
-description: Install and manage dev tools with multiple environments
 description: View images right from the terminal.
-description: 📦✨ your favorite rust -> wasm workflow tool!
-description: Wasmer CLI
 description: A simple and easy to use Wikipedia Text User Interface
 description: Weather companion for the terminal
 description: XCompress is a free file archiver utility on Linux, providing multi-format archiving to and extracting from ZIP, Z, GZIP, BZIP2, LZ, XZ, LZMA, 7ZIP, TAR, RAR and ZSTD.
 description: Friendly and fast tool for sending HTTP requests
-description: A hackable, minimal, fast TUI file explorer
 description: A high performance CSV command line toolkit.
 description: yet another youtube (and more) down loader
-description: minimalistic menu for wayland
-description: An aesthetically pleasing YouTube TUI written in Rust
-description: yquery is a yaml-query command-line utility based on the idea of jquery
 description: A terminal workspace with batteries included
-description: A smarter cd command for your terminal
