@@ -16,12 +16,9 @@ alacritty = { source = "alacritty", target = ".config/alacritty" }
 autostart = { source = "autostart", target = ".config/autostart" }
 bat = { source = "bat", target = ".config/bat" }
 bottom = { source = "bottom", target = ".config/bottom" }
-broot = { source = "broot", target = ".config/broot" }
-calcurse = { source = "calcurse", target = ".config/broot" }
-comrak = { source = "comrak", target = ".config/comrak" }
 fish = { source = "fish", target = ".config/fish" }
+gitui = { source = "gitui", target = ".config/gitui"}
 helix = { source = "helix", target = ".config/helix" }
-himalaya = { source = "himalaya", target = ".config/himalaya" }
 hyprland = { source = "hypr", target = ".config/hypr" }
 kitty = { source = "kitty", target = ".config/kitty" }
 macchina = { source = "macchina", target = ".config/macchina" }

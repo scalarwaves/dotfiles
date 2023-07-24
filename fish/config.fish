@@ -259,11 +259,8 @@ alias jctl="journalctl -p 3 -xb"
 alias rpkgs="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # Completion
 lazycomplete \
-    gh 'gh completion' \
-    lab 'lab completion' \
     kitty 'kitty + complete setup fish' \
     ptags 'ptags --completion fish' \
-    himalaya 'himalaya completion fish' \
     luarocks "luarocks completion fish" \
     zellij "zellij --generate-completion fish" \
 | source

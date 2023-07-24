@@ -296,7 +296,7 @@ set $laptop <eDP-1>
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always ~/.config/sway/scripts/clamshell.sh
-exec ~/.cargo/bin/wpaperd
+exec wpaperd
 ### Input configuration
 # Example configuration:
 # You can get the names of your inputs by running: swaymsg -t get_inputs
