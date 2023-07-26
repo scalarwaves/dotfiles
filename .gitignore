@@ -2,4 +2,6 @@ config
 .dots
 ptags.fish
 *.sh
-cargo*.txt
+cargo-descriptions.txt
+cargo-packages.txt
+
