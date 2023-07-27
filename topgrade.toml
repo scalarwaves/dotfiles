@@ -2,7 +2,7 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choosenim", "composer", "conda", "config_update", "containers", "deb_get", "dotnet", "firmware", "flatpak", "flutter", "fossil", "gcloud", "github_cli_extensions", "git_repos", "go", "haxelib", "gnome_shell_extensions", "home_manager", "jetpack", "kakoune", "krew", "macports", "mas", "myrepos", "nix", "pacstall", "pearl", "powershell", "raco", "remotes", "restarts", "rtcl", "scoop", "sdkman", "sheldon", "snap", "spicetify", "stack", "toolbx", "vagrant", "vcpkg", "vim", "winget", "wsl", "yadm"]
+disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choosenim", "composer", "conda", "config_update", "containers", "deb_get", "dotnet", "flatpak", "flutter", "fossil", "gcloud", "github_cli_extensions", "git_repos", "haxelib", "gnome_shell_extensions", "home_manager", "jetpack", "kakoune", "krew", "macports", "mas", "myrepos", "nix", "pacstall", "pearl", "powershell", "raco", "remotes", "restarts", "rtcl", "scoop", "sdkman", "sheldon", "snap", "spicetify", "stack", "toolbx", "vagrant", "vcpkg", "vim", "winget", "wsl", "yadm"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -11,7 +11,7 @@ disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choos
 #only = ["system", "emacs"]
 
 # Do not ask to retry failed steps (default: false)
-#no_retry = true
+no_retry = true
 
 # Run inside tmux
 #run_in_tmux = true
@@ -35,7 +35,7 @@ disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choos
 # display_time = true
 
 # Cleanup temporary or old files
-#cleanup = true
+cleanup = true
 
 [git]
 #max_concurrency = 5
@@ -61,14 +61,14 @@ disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choos
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-"Cargo Save" = "~/.bin/cargosave.fish"
+#"Cargo Save" = "~/.bin/cargosave.fish"
 
 [brew]
 #greedy_cask = true
 
 [linux]
 # Arch Package Manager to use. Allowed values: autodetect, trizen, paru, yay, pikaur, pacman.
-#arch_package_manager = "pacman"
+arch_package_manager = "paru"
 # Arguments to pass yay (or paru) when updating packages
 #yay_arguments = "--nodevel"
 #show_arch_news = true
@@ -88,15 +88,15 @@ disable = ["emacs", "asdf", "atom", "brew_cask", "chezmoi", "chocolatey", "choos
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
 # manager such as Scoop to Cargo
-#self_rename = true
+self_rename = true
 
 [npm]
 # Use sudo if the NPM directory isn't owned by the current user
-#use_sudo = true
+use_sudo = true
 
 [firmware]
 # Offer to update firmware; if false just check for and display available updates
-#upgrade = true
+upgrade = true
 
 [flatpak]
 # Use sudo for updating the system-wide installation
