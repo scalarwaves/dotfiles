@@ -292,6 +292,20 @@ keybinds clear-defaults=true {
         bind "Alt -" { Resize "Decrease"; }
         bind "d" { Detach; }
     }
+    shared_except "locked" {
+        bind "F1" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle" {
+                floating true
+            }
+        }
+    }
+    shared_except "locked" {
+        bind "Ctrl y" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+                floating true
+            }
+        }
+    }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
