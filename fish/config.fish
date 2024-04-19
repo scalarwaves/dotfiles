@@ -15,7 +15,7 @@ set -x MICRO_TRUECOLOR 1
 #set -x MOZ_ENABLE_WAYLAND=1
 set -x NNN_FIFO /tmp/nnn.fifo
 set -x NNN_PLUG "f:finder;o:fzopen;m:mocplay;d:diffs;t:nmount;v:imgview;p:pdfview;w:preview-tui;z:autojump;"
-set -x PATH "$HOME/.bin" "$HOME/.cargo/bin" "$HOME/.local/share/gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.local/bin" "$PATH"
+set -x PATH "$HOME/.bin" "$HOME/.grit/bin"  "$HOME/.cargo/bin" "$HOME/.local/share/gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.gem/ruby/3.0.0/bin" "$HOME/.local/bin" "$PATH"
 set -x RUSTC_WRAPPER sccache
 set -x SKIM_DEFAULT_COMMAND "fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 set -x TERMINAL alacritty

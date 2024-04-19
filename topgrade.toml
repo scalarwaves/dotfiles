@@ -30,7 +30,7 @@ no_retry = true
 
 # Do not set the terminal title
 #set_title = false
-
+skip_notify = true
 # Display the time in step titles
 # display_time = true
 
